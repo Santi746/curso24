@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: 20px;
+  height: 100vh;
+  background-color: #000;
+  color: aliceblue;
+  overflow: hidden;
+
+  .box{
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 500px;
+  height: 500px;
+  background-color: #ff6b6b;
+  animation-name: box;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+ /*  animation-iteration-count: 2;
+  animation-direction: alternate; */
+  /* visibility: hidden; */
+  /*  animation-fill-mode: forwards;  */
+  }
+  .box-two{
+    display: flex;
+    place-content: center;
+    place-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: #ff6b6b;
+    /* Esto es lo mismo */
+    /* animation-name: box;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; */
+    /* Que todo esto */
+    animation: box 3s ease-in-out 2s forwards;
+    /* visibility: hidden; */
+  }
+  
+  /* @media screen and (max-width: 800px) {
+  .box{
+      width: 200px;
+      height: 200px;
+    }
+    .box-two{
+      width: 200px;
+      height: 200px;
+    }
+  } */
+}
+
+/* Animaciones en CSS */
+
+@keyframes box {
+  0%{
+    background-color: #ff6b6b;
+    transform: rotate(0deg) scale(1);
+  }
+  50%{
+    background-color: #000;
+    transform: rotate(180deg) scale(1.5);
+  }
+  100%{
+    background-color: #6bbcff;
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* @keyframes box {
+  0%{
+    background-color: #ff6b6b;
+    transform: translateX(-400px);
+    visibility: visible;
+  }
+  50%{
+    background-color: #000;
+    transform: translateX(-200px);
+    visibility: visible;
+  }
+  100%{
+    background-color: #6bbcff;
+    transform: translateX(0px);
+    visibility: visible;
+  }
+}
+
+@keyframes boxTwo {
+  0%{
+    background-color: #ff6b6b;
+    transform: translateX(400px);
+    visibility: visible;
+  }
+  50%{
+    background-color: #000;
+    transform: translateX(200px);
+    visibility: visible;
+  }
+  100%{
+    background-color: #6bbcff;
+    transform: translateX(0px);
+    visibility: visible;
+  }
+} */
+
+/* Yo puedo estilar mis elementos para cada uno de los
+tamaños de pantalla con media queries */
+
+@media screen and (max-width: 800px) {
+  .container{
+    .box{
+      width: 200px;
+      height: 200px;
+    }
+    .box-two{
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container{
+    .box{
+      width: 300px;
+      height: 300px;
+    }
+    .box-two{
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container{
+    .box{
+      width: 400px;
+      height: 400px;
+    }
+    .box-two{
+      width: 400px;
+      height: 400px;
+    }
+  }
+}

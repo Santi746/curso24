@@ -1,0 +1,201 @@
+//Variables
+$primary-color: #295879
+$secondary-color: #19763e
+$success-color: #70d197
+$danger-color: #d9534f
+$text-color: #2c3e50
+$light-color: #ecf0f1
+$dark-color: #34495e
+$border-radius: 8px
+$spacing-xs: 4px
+$spacing-sm: 8px
+$spacing-md: 16px
+$spacing-lg: 24px
+$font-size-xs: 12px
+$font-size-sm: 14px
+$font-size-md: 16px
+$font-size-lg: 20px
+$font-size-xl: 24px
+$shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+//Mixin con parametros para border radius
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+  
+//Mixin para flexbox
+@mixin flex-center($direction:row)
+  display: flex
+  flex-direction: $direction
+  justify-content: center
+  align-items: center
+
+//crear clases placeholder reutizables
+
+%shadow
+  box-shadow: $shadow
+
+//creamos un placeholder para transiciones
+
+%transition
+  transition: all 0.3s ease
+
+body
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  line-height: 1.6
+  color: $text-color
+  background-color: $light-color
+  padding: $spacing-sm
+  
+//estilar el header
+
+.header
+  text-align: center
+  margin-bottom: $spacing-lg
+  background: linear-gradient(135deg, $primary-color, darken($primary-color,15% ))
+  color: $light-color
+  @include border-radius($border-radius)
+  padding: $spacing-md
+  @extend %shadow
+  h1
+    margin-bottom: $spacing-sm
+
+//Main content 
+.main
+  max-width: 1200px
+  margin: 0 auto
+
+.section
+  margin-bottom: $spacing-lg * 2
+  padding: $spacing-xs
+  background-color: $light-color
+  @include border-radius($border-radius)
+  @extend %shadow
+  &_title
+    font-size: $font-size-xl
+    margin-bottom: $spacing-md
+    color: $secondary-color
+  &_content
+    @include flex-center(column)
+    gap: $spacing-md
+    &--cards
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-around
+      align-items: stretch
+    
+//Buttons
+
+.btn
+  display: inline-block
+  padding: $spacing-sm $spacing-md
+  border: none
+  @include border-radius($border-radius)
+  font-size: $font-size-md
+  cursor: pointer
+  @extend %transition
+  @extend %shadow
+  @include flex-center
+  &:hover
+    transform: translateY(-2px)
+    @extend %shadow
+  &:active
+    transform: translateY(0)
+    @extend %shadow
+  //Apliquemos los modificadores de color
+  &--primary
+    background-color: $primary-color
+    color: $light-color
+    &:hover
+      background-color: darken($primary-color, 10%)
+  &--secondary
+    background-color: $secondary-color
+    color: $light-color
+    &:hover
+      background-color: darken($secondary-color, 10%)
+  &--success
+    background-color: $success-color
+    color: $light-color
+    &:hover
+      background-color: darken($success-color, 10%)
+  &--danger
+    background-color: $danger-color
+    color: $light-color
+    &:hover
+      background-color: darken($danger-color, 10%)
+  &--small
+    font-size: $font-size-xs
+    padding: $spacing-xs
+
+  &--large
+    font-size: $font-size-lg
+    padding: $spacing-lg
+  &--disabled
+    opacity: 0.6
+    cursor: not-allowed
+    &:hover
+      transform: none
+      @extend %shadow
+
+//Cards BEM
+.card
+  width: 300px
+  background-color: $light-color
+  @include border-radius($border-radius)
+  overflow: hidden
+  &extend %shadow
+  &:hover
+    transform: translateY(-5px)
+    @extend %shadow
+  &_image
+    width: 100%
+    height: 200px
+    object-fit: cover
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &:hover
+      transform: scale(1.05)
+  &_content
+    padding: $spacing-md
+  &_title
+    font-size: $font-size-lg
+    margin-bottom: $spacing-sm
+    color: $dark-color
+  p
+    margin-bottom: $spacing-sm
+    color: lighten($dark-color, 20% )
+  &_footer
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: $spacing-md 
+    border-top: 1px solid lighten($dark-color, 20% )
+  &_date
+    font-size: $font-size-sm
+    color: lighten($dark-color, 20%)
+  &_badge
+    background-color: $primary-color
+    color: $light-color
+    padding: $spacing-xs $spacing-sm
+    @include border-radius($border-radius)
+    font-size: $font-size-sm
+  &--highlighted
+    border: 2px solid $primary-color
+    .card_title
+      color: $primary-color
+
+.footer
+  text-align: center
+  margin-top: $spacing-lg * 2
+  padding: $spacing-md
+  background-color: $light-color
+  @include border-radius($border-radius)
+  @extend %shadow

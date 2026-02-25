@@ -1,0 +1,67 @@
+/* Las variables almacenan un valor */
+$base-color: #9b58ff
+
+
+@mixin display()
+  display: flex
+  place-content: center
+  place-items: center
+  width: 150px
+  height: 150px
+
+/* Las funciones son bloques de codigo hermeticos que nos devuelvene el resultado de una operacion */
+
+/* Esta funcion en especifico nos sirve para generar un mismo color con distintos niveles de transparencia */
+@function set-transparency($color, $level)
+  $base-color: rgba($color, $level)
+  /* No importa si hago mas cosas, la ejecucion de mi funcion equivaldra solo a lo que retorno */
+  $secondary-color: rgba($color, $level + 0.1)
+  @return $base-color
+
+.container
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  place-items: center
+  place-content: center
+  gap: 10px
+  &_item1
+    @include display
+    background: set-transparency(#58a6ff, 0.5) 
+  &_item2
+    @include display
+    background: set-transparency(#ff58cd, 0.5)
+  &_item3
+    @include display
+    background: set-transparency($base-color, 0.5)
+  &_item4
+    @include display
+    background: set-transparency(#58ff5b, 0.5) 
+  &_item_btn
+    background: $base-color
+    color: #fff
+    border-radius: 10px
+    border: none
+    cursor: pointer
+    font-size: 0.5rem
+    font-weight: bold
+    padding: 10px 20px
+    transition: all 0.3s ease-in-out
+    &:hover
+      transform: scale(1.05)
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  &_item_btn_alarm
+    @extend .container_item_btn
+    background: set-transparency(#fcff58, 0.5)
+    color: #000
+  &_item_btn_warning
+    @extend .container_item_btn
+    background: set-transparency(#ff5858, 0.5)
+    color: #fff
+  &_item_btn_completed
+    @extend .container_item_btn
+    background: set-transparency(#157447, 0.5)
+    color: #000
+
+//Ejercicio para practicar en casa
+
+//Revisar archivo adjunto practicaSass

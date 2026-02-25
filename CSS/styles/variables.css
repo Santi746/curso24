@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Las variables son una herramienta para almacenar valores  */
+
+/* Variable Global */
+:root{
+  --primary-color: #ff6b6b;
+  --secondary-color: #6bc4ff;
+  --background-color: #f4f4f4;
+  --spacing: 20px;
+}
+
+.dark{
+  --primary-color: #ffd56b;
+  --secondary-color: #6bffae;
+  --background-color: #363636;
+}
+
+body{
+  background-color: var(--background-color);
+  padding: var(--spacing);
+  min-height: 100vh;
+}
+
+.card{
+  background-color: white;
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button{
+  background: rgb(66, 108, 143);
+  color: white;
+  border: none;
+  --font-size: 2rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn{
+  background: var(--primary-color);
+  font-size: var(--font-size);
+}
+
+.btn-secondary{
+  background: var(--secondary-color);
+}

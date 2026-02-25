@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: bisque;
+  height: 100dvh;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100dvh;
+  place-content: center;
+  place-items: center;
+}
+
+.title{
+  transform: rotate(45deg);
+}
+
+.paragraph{
+  transform: scale(1.7);
+}
+
+#span{
+  transform: translate(150px, 200px);
+}
+
+.def{
+  transform: skew(10deg,30deg);
+}

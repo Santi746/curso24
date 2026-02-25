@@ -1,0 +1,56 @@
+//Esta sera mi variable para el color principal
+
+$color-principal: #0d111e
+$fuente-principal: 'Helvetica', sans-serif
+
+*
+  margin: 0
+  padding: 0
+
+body
+  background-color: $color-principal
+  color: white
+  font-family: $fuente-principal
+  text-align: center
+
+.headerContainer
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 20px 0px
+    width: 100dvw
+    &_nav
+      display: flex
+      gap: 20px
+      justify-content: space-between
+      width: 100dvw
+      align-items: center
+      padding: 0px 20px
+      &_logo
+        &_img
+          width: 100px
+          height: 50px
+
+.headerContainer_nav
+  &_menu
+        display: flex
+        gap: 15px
+        &_list
+          display: flex
+          gap: 15px
+          list-style: none
+        a
+          color: white
+          text-decoration: none
+          &:hover
+            text-decoration: underline  
+
+.btn
+  background-color: #58a6ff
+  color: white
+  margin-top: 20px
+  padding: 10px 20px
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  font-size: 16px

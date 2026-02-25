@@ -1,0 +1,53 @@
+//lista de colores separados por comas
+$social-media-colors: #6bff81, #6bbcff, #ff936b
+
+//lista de colores separados por espacios
+$spacings: 10px 20px 30px
+
+//listas de clave - valor
+$font-sizes: (
+  "small": 12px,
+  "medium": 16px,
+  "large": 20px
+)
+
+$sm-background-colors: (
+  "purple": #c66bff,
+  "orange": #ff976b,
+  "turquoise": #61aec2
+)
+
+$themes:(
+  "primary": #6baeff,
+  "secondary": #6bc4ff,
+  "danger": #ff6b6b 
+)
+
+//el primero de mis bucles es el each (para cada)
+@each $color-name, $color-value in $sm-background-colors
+  .bg-#{$color-name}
+    background-color: $color-value //en la primera vuelta el valor de $color-value es #c66bff
+//En la primera vuelta (iteracion) el valor de $color-name es "purple" y el valor de $color-value es #c66bff
+
+.btn
+  display: inline-block
+  padding: 10px 20px
+  border-radius: 5px
+  color: #131111
+  margin-top: 20px
+  transition: background-color 0.3s ease
+
+@each $theme-name, $theme-color in $themes
+  .btn--#{$theme-name}
+    background-color: $theme-color
+    &:hover
+      background-color: darken($theme-color, 10%)
+   
+//Bucle for
+
+//nos sirve para recorrer un rango de numeros
+
+@for $i from 1 through 5
+  .btn--#{$i}
+    font-size: #{$i * 2}px
+

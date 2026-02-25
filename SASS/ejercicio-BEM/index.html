@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practica Sass - Componentes BEM</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Practica de Sass con Metodologia BEM</h1>
+    <p>Componentes reutilizables</p>
+  </header>
+  <main class="main">
+    <section class="section">
+      <h2 class="section_title">Botones</h2>
+      <div class="section_content">
+        <button class="btn btn--primary">
+          Primario
+        </button>
+        <button class="btn btn--secondary">
+          Secundario
+        </button>
+        <button class="btn btn--success">
+          Exito
+        </button>
+        <button class="btn btn--danger">
+          Peligro
+        </button>
+        <button class="btn btn--primary btn--small">
+          Pequeño
+        </button>
+        <button class="btn btn--primary btn--large">
+          Grande
+        </button>
+        <button class="btn btn--primary btn--disabled" disabled>
+          Deshabilitado
+        </button>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section_title">Tarjetas de perfil</h2>
+      <div class="section_content section_content--cards">
+        <div class="card">
+          <div class="card_image">
+            <img src="https://i.pinimg.com/736x/84/8f/fe/848ffed03e6cebd3d9e97c8b5fb2869c.jpg" alt="avatar">
+          </div>
+          <div class="card_content">
+            <h3 class="card_title">Dario Mappary</h3>
+            <p>Desarrollador web fullstack con fuerte experiencia en sass</p>
+            <div class="card_footer">
+              <span class="card_date">
+                Miembro desde: Julio de 2025
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="card card--highlighted">
+          <div class="card_image">
+            <img src="https://i.pinimg.com/736x/12/7f/0b/127f0b99fb63674a6571e12b70233300.jpg" alt="avatar">
+          </div>
+          <div class="card_content">
+            <h3 class="card_title">Santiago Quevedo</h3>
+            <p>Desarrollador web fullstack con fuerte experiencia en sass</p>
+            <div class="card_footer">
+              <span class="card_date">
+                Miembro desde: Julio de 2025
+              </span>
+              <span class="card_badge">
+                Premium
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2025 Practica de Sass con Metodologia BEM</p>
+  </footer>
+</body>
+</html>

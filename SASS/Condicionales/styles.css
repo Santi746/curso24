@@ -1,0 +1,39 @@
+/* Las variables almacenan un valor */
+body {
+  background: #8a8484;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  place-content: center;
+  gap: 10px;
+}
+.container_item {
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.container .container_item_notification-success {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #104a1f;
+  color: #ffffff;
+}
+.container .container_item_notification-error {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #ff4d4d;
+  color: #000000;
+}/*# sourceMappingURL=styles.css.map */

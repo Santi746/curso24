@@ -1,0 +1,61 @@
+.bg-purple {
+  background-color: #c66bff;
+}
+
+.bg-orange {
+  background-color: #ff976b;
+}
+
+.bg-turquoise {
+  background-color: #61aec2;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #131111;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn--primary {
+  background-color: #6baeff;
+}
+.btn--primary:hover {
+  background-color: rgb(56, 146.0878378378, 255);
+}
+
+.btn--secondary {
+  background-color: #6bc4ff;
+}
+.btn--secondary:hover {
+  background-color: rgb(56, 175.6689189189, 255);
+}
+
+.btn--danger {
+  background-color: #ff6b6b;
+}
+.btn--danger:hover {
+  background-color: #ff3838;
+}
+
+.btn--1 {
+  font-size: 2px;
+}
+
+.btn--2 {
+  font-size: 4px;
+}
+
+.btn--3 {
+  font-size: 6px;
+}
+
+.btn--4 {
+  font-size: 8px;
+}
+
+.btn--5 {
+  font-size: 10px;
+}/*# sourceMappingURL=main.css.map */

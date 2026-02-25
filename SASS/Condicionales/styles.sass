@@ -1,0 +1,37 @@
+/* Las variables almacenan un valor */
+$base-color: #104a1f
+$important-text: true
+
+body
+  background: #8a8484
+
+@mixin display()
+  display: flex
+  place-content: center
+  place-items: center
+
+@mixin theme-letter-color($background-color)
+  width: 150px
+  height: 150px
+  padding: 10px 20px
+  border-radius: 10px
+  background-color: $background-color
+  @if (lightness($background-color) > 50%)
+    color: #000000 //estoy delante de un fondo claro el color de la letra debe ser oscuro
+  @else
+    color: #ffffff //estoy delante de un fondo oscuro el color de la letra debe ser claro
+  
+.container
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  place-items: center
+  place-content: center
+  gap: 10px
+  &_item
+    @include display
+  .container_item_notification-success
+    @include display
+    @include theme-letter-color($base-color)
+  .container_item_notification-error
+    @include display
+    @include theme-letter-color(#ff4d4d)

@@ -1,0 +1,51 @@
+/* Ejercicio:
+Grid Areas:
+Define un layout de 3 áreas: arriba (20%), centro (60%), abajo (20%). Usa grid-template-areas. */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+.layout{
+  display: grid;
+  grid-template-areas: 
+  "top"
+  "center"
+  "bottom"
+  ;
+  grid-template-rows: 20% 60% 20%;
+  height: 300px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+  border: 1px solid #ccc;
+}
+
+.top{
+  grid-area: top;
+  background-color: #ff6b6b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.center{
+  grid-area: center;
+  background-color: #4ecdc4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.bottom{
+  grid-area: bottom;
+  background-color: #ffd166;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}

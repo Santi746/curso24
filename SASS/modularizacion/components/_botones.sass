@@ -1,0 +1,29 @@
+@use "mixins" as patata
+  
+$themes:(
+  "primary": #6baeff,
+  "secondary": #6bc4ff,
+  "danger": #ff6b6b 
+)
+
+.btn
+  @include patata.display
+  padding: 10px 20px
+  border-radius: 5px
+  color: #131111
+  margin-top: 20px
+  transition: background-color 0.3s ease
+
+@each $theme-name, $theme-color in $themes
+  .btn--#{$theme-name}
+    background-color: $theme-color
+    &:hover
+      background-color: darken($theme-color, 10%)
+
+$breakpoint-sm: 768px
+$breakpoint-md: 1024px
+
+//esta es la forma de hacer media queries en sass
+@media screen and (min-width: $breakpoint-sm)
+  .btn
+    margin-top: 0

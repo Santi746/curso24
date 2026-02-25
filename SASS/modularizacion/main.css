@@ -1,0 +1,55 @@
+.btn {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #131111;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn--primary {
+  background-color: #6baeff;
+}
+.btn--primary:hover {
+  background-color: rgb(56, 146.0878378378, 255);
+}
+
+.btn--secondary {
+  background-color: #6bc4ff;
+}
+.btn--secondary:hover {
+  background-color: rgb(56, 175.6689189189, 255);
+}
+
+.btn--danger {
+  background-color: #ff6b6b;
+}
+.btn--danger:hover {
+  background-color: #ff3838;
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    margin-top: 0;
+  }
+}
+.bg-purple {
+  background-color: #c66bff;
+}
+
+.bg-orange {
+  background-color: #ff976b;
+}
+
+.bg-turquoise {
+  background-color: #61aec2;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}/*# sourceMappingURL=main.css.map */

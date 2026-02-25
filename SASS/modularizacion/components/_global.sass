@@ -1,0 +1,23 @@
+//Aqui estaran variables
+
+$themes:(
+  "primary": #6baeff,
+  "secondary": #6bc4ff,
+  "danger": #ff6b6b 
+)
+
+//aqui estaran mixins
+
+@mixin display()
+  display: flex
+  place-content: center
+  place-items: center
+
+//Aqui estaran funciones
+
+@function set-transparency($color, $level)
+  $base-color: rgba($color, $level)
+  /* No importa si hago mas cosas, la ejecucion de mi funcion equivaldra solo a lo que retorno */
+  $secondary-color: rgba($color, $level + 0.1)
+  @return $base-color
+  

@@ -1,0 +1,150 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  place-content: center;
+  place-items: center;
+  height: 100vh;
+  background-color: #000;
+  color: aliceblue;
+}
+
+.hover{
+  background-color: aquamarine;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+/* Pseudo-classes su estructura es:
+  
+  elemento:pseudo-clase
+
+*/
+
+/* La pseudo-clase hover es una pseudo-clase que nos permite definir una accion al posicionar el cursor encima de un elemento */
+.hover:hover{
+  background-color: #6bbfff;
+}
+
+/* La pseudo-clase active es una pseudo-clase que nos permite definir una accion al hacer click en un elemento */
+.hover:active{
+  background-color: #c46bff;
+  scale: 1.5;
+}
+
+input{
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #ccc;
+}
+
+/* La pseudo-clase focus es una pseudo-clase que nos permite definir una accion al hacer click en un elemento y que estemos con el foco en el elemento */
+input:focus{
+  background-color: #6bc9ff;
+  border: 1px solid #04314b;
+  color: #04314b;
+}
+
+p:hover{
+  color: #ff6b6b;
+}
+
+.list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+/* La pseudo-clase nth-child es una pseudo-clase que nos permite definir estilos o acciones a n-cantidad de hijos de un elemento */
+list:nth-child(odd){
+  background-color: #ff6b6b;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+list:first-child{
+  color: #04314b;
+}
+
+list:last-child{
+  color: #fdff6b;
+}
+
+.checkbox-container{
+  display: flex;
+  gap: 10px;
+  place-content: center;
+  place-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* La pseudo-clase checked es una pseudo-clase que nos permite definir estilos o acciones a los inputs de tipo checkbox que se encuentren marcados */
+input[type="checkbox"]:checked{
+  accent-color: #6bd3ff;
+  scale: 2.5;
+}
+
+/* La pseudo-clase not es una pseudo-clase que nos permite definir estilos o acciones a los inputs de tipo checkbox que no se encuentren marcados, es decir verifica que una condicion
+no se cumpla */
+input[type="checkbox"]:not(:checked){
+  scale: 1.5;
+}
+
+/* La pseudo-clase checked es una pseudo-clase que nos permite definir estilos o acciones a los inputs de tipo radio que se encuentren marcados */
+input[type="radio"]:checked{
+  accent-color: #6bd3ff;
+  scale: 2.5;
+}
+
+/* La pseudo-clase invalid es una pseudo-clase que nos permite definir estilos o acciones a los inputs de tipo email que no se encuentren validos */
+input[type="email"]:invalid{
+  scale: 1.5;
+  border: 1px solid #ff6b6b;
+  color: #ff6b6b;
+}
+
+/* La pseudo-clase valid es una pseudo-clase que nos permite definir estilos o acciones a los inputs de tipo email que se encuentren validos */
+input[type="email"]:valid{
+  border: 1px solid #81ff6b;
+  color: #6eff6b;
+}
+
+/* La pseudo-clase disabled es una pseudo-clase que nos permite definir estilos o acciones a los inputs de tipo text que se encuentren deshabilitados */
+input[type="text"]:disabled{
+  color: aquamarine;
+}
+
+/* La pseudo-clase link es una pseudo-clase que nos permite definir estilos o acciones a los enlaces */
+list a:link{
+  color: #042b3c;
+  text-decoration: none;
+}
+
+list a:visited{
+  color: #6bffae;
+}
+
+list a:hover{
+  color: #706bff;
+}
+
+input:read-only{
+  background-color: #ff956b;
+}
+
+
+/* Tarea Crear una pagina web con un formulario que permita elegir entre un rago de precios de un producto y definir pseudo clases para rangos validos y invalidos en un rango de 1 a 10 */

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./Roboto.woff2') format('woff2');
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Variables personalizadas */
+  --color-delvis: #3490dc;
+
+  /* Media queries personalizadas */
+
+  --breakpoint-lg-up: (min-width: 1029px);
+
+  /* variables de letras personalizadas */
+
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+/* Clases personalizadas */
+
+.paragraph {
+  @apply font-semibold w-[80%] text-justify;
+}

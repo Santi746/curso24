@@ -1,0 +1,43 @@
+/* Ejercicio:
+Grid Básico:
+Crea una cuadrícula de 2x2 (200px x 200px) con 4 celdas. Colorea cada celda y usa gap: 5px. */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 402px;
+  height: 403px;
+  gap: 5px;
+}
+
+.grid-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: aliceblue;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.grid-item:nth-child(1){
+  background-color: #ff6b6b;
+}
+
+.grid-item:nth-child(2){
+  background-color: #4ecdc4;
+}
+
+.grid-item:nth-child(3){
+  background-color: #ffd166;
+}
+
+.grid-item:nth-child(4){
+  background-color: #6a4c93;
+}

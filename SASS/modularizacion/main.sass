@@ -1,0 +1,18 @@
+@import "components/botones"
+
+$sm-background-colors: (
+  "purple": #c66bff,
+  "orange": #ff976b,
+  "turquoise": #61aec2
+)
+
+//el primero de mis bucles es el each (para cada)
+@each $color-name, $color-value in $sm-background-colors
+  .bg-#{$color-name}
+    background-color: $color-value
+
+body
+  display: flex
+  flex-direction: column
+  place-content: center
+  place-items: center  

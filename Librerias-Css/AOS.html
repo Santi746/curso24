@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>AOS</title>
+</head>
+<body class="flex flex-col flex-wrap justify-center items-center min-h-screen min-w-screen bg-gray-100 overflow-x-hidden">
+  <span id="tope"></span>
+        <nav class="fixed top-0 left-0 w-full bg-white shadow-md flex justify-around items-center h-12 z-10">
+            <a href="#desvanecer">
+                Fade
+            </a>
+            <a href="#voltear">
+                Flip
+            </a>
+            <a href="#zoom">
+                Zoom
+            </a>
+            <a href="#configuraciones">
+                Config. Extras
+            </a>
+        </nav>
+  <div id="inicio">
+    <div class="flex flex-col flex-wrap justify-center items-center min-h-screen min-w-screen" data-aos="fade-right" data-aos-duration="2000">
+      <h1>Aprendiendo a usar AOS</h1>
+    </div>
+  </div>
+  <div class="flex flex-col flex-wrap  justify-center items-center min-h-screen min-w-screen" data-aos="fade-left" data-aos-duration="3000" data-offset="800" >
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, illum, corrupti nesciunt dicta commodi ducimus, architecto non eaque aliquid adipisci libero sit expedita reiciendis laboriosam ipsa. Nisi excepturi architecto odio.</p>
+  </div>
+  <div class="flex flex-col flex-wrap px-4 justify-center items-center min-h-screen min-w-screen" data-aos="fade-up-left" data-aos-duration="3000" data-offset="800">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, illum, corrupti nesciunt dicta commodi ducimus, architecto non eaque aliquid adipisci libero sit expedita reiciendis laboriosam ipsa. Nisi excepturi architecto odio.</p>
+  </div>
+  <div class="flex flex-col flex-wrap px-4 justify-center items-center min-h-screen min-w-screen" data-aos="flip-right" data-aos-duration="3000" data-offset="800">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, illum, corrupti nesciunt dicta commodi ducimus, architecto non eaque aliquid adipisci libero sit expedita reiciendis laboriosam ipsa. Nisi excepturi architecto odio.</p>
+  </div>
+  <div class="flex flex-col flex-wrap px-4 justify-center items-center min-h-screen min-w-screen" data-aos-duration="3000" data-offset="800" data-aos="zoom-in-up">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, illum, corrupti nesciunt dicta commodi ducimus, architecto non eaque aliquid adipisci libero sit expedita reiciendis laboriosam ipsa. Nisi excepturi architecto odio.</p>
+  </div>
+  <div class="flex flex-col flex-wrap px-4 justify-center items-center min-h-screen min-w-screen"
+  data-aos-duration="3000" data-offset="800" data-aos="zoom-out-right"
+  >
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, illum, corrupti nesciunt dicta commodi ducimus, architecto non eaque aliquid adipisci libero sit expedita reiciendis laboriosam ipsa. Nisi excepturi architecto odio.</p>
+  </div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</html>

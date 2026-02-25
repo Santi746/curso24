@@ -1,0 +1,107 @@
+//Esta sera mi variable para el color principal
+
+$color-principal: #0d111e
+$fuente-principal: 'Helvetica', sans-serif
+
+/*
+    ¿Que es un mixin?
+        Un mixin es una funcion que aloja una plantilla de estilos que se pueden reutilizar 
+        y personalizar en cualquier parte del codigo.
+
+    ¿Como se categorizan?
+        - Mixin sin parametros
+        - Mixin con parametros
+
+    ¿Que son parametros?
+        Los parametros son variables temporales que se utilizan para movilizar datos en una funcion.
+        Estos datos se utilizaran en el interior de la funcion cada vez que sean solicitados.
+
+        Los parametros pueden ser cualquier cosa y se definen con el simbolo de "$" seguido del nombre del parametro.
+        Adicionalmente pueden tener valores predefinidos utilizando ":" para agregar o asignar un valor,
+        de esta manera si el parametro no se envia ya tendra un valor previamente definido.
+
+    ¿Como se definen?
+        Para definir un mixin se utiliza la palabra clave @mixin seguido del nombre del mixin.
+
+        NOTA: En caso de que se requiera parametros se colocan entre parentesis despues del nombre del mixin.
+
+
+    ¿Como se usan?
+        Para utilizar un mixin se utiliza la palabra clave @include seguido del nombre del mixin.
+
+        NOTA: En caso de que el mixin maneje parametros, se envian en los parentesis y en el orden
+        definido en el mixin.
+    */
+
+//Mixin sin parametros
+@mixin display-Flex-Center()
+  display: flex
+  align-items: center
+  justify-content: center
+
+//Podemos crear mixins que reciban parametros
+@mixin display-Grid-Center-Column($quantity: 1, $gap: 20px)
+  display: grid
+  grid-template-columns: repeat($quantity, 1fr)
+  gap: $gap
+
+*
+  margin: 0
+  padding: 0
+
+body
+  background-color: $color-principal
+  color: white
+  font-family: $fuente-principal
+  text-align: center
+
+
+/* SASS permite anidar selectores CSS, lo que puede reducir la necesidad de escribir selectores repetitivos y aumentar la legibilidad del código.  */
+.headerContainer
+    @include display-Flex-Center
+    //Para llamar a un mixin, usamos @include
+    padding: 20px 0px
+    width: 100dvw
+    &_nav
+      display: flex
+      gap: 20px
+      justify-content: space-between
+      width: 100dvw
+      align-items: center
+      padding: 0px 20px
+      &_logo
+        &_img
+          width: 100px
+          height: 50px
+
+.headerContainer_nav
+  &_menu
+        display: flex
+        gap: 15px
+        &_list
+          display: flex
+          gap: 15px
+          list-style: none
+        a
+          color: white
+          text-decoration: none
+          &:hover
+            text-decoration: underline  
+
+.btn
+  background-color: #709dd1
+  color: white
+  margin-top: 20px
+  padding: 10px 20px
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  font-size: 16px
+
+.grid
+  @include display-Grid-Center-Column(2,10px)
+
+//Ejercicio opcional:
+//Crea un mixin para centrar elementos con display flex y gap primero sin parametros y luego con parametros
+
+//Y centrar algun contenido con ese mixin

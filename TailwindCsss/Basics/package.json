@@ -1,0 +1,16 @@
+{
+  "name": "tailwindcssbasics",
+  "version": "1.0.0",
+  "description": "es un proyecto de practica para lexpin",
+  "main": "index.js",
+  "scripts": {
+    "build:styles": "npx @tailwindcss/cli -i index.css -o output.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@midudev/tailwind-animations": "^0.2.0",
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}

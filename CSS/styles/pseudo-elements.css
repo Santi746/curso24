@@ -1,0 +1,47 @@
+/* el pseudo elemento ::selection nos sirve para 
+modificar la seleccion de texto */
+
+
+section h1::selection{
+  color: #c21313;
+  background-color: aqua;
+}
+
+/* el pseudo elemento ::before nos permite insertar 
+contenido justo antes del contenido de una etiqueta */
+section h1::before{
+  content: "⚠️";
+  margin-right: 10px;
+}
+
+section p{
+  font-size: x-large;
+  color: rgb(5, 56, 100);
+  background-color: antiquewhite;
+  padding: 10px;
+  position: relative;
+  z-index: 99;
+}
+
+
+/* Nos permite modificar y estilar la primera letra
+de una etiqueta que contenga texto */
+section p::first-letter{
+  font-size: x-large;
+  color: rgb(5, 56, 100);
+}
+
+/* Nos permite modificar y estilar la primera linea
+de una etiqueta que contenga texto */
+section p::first-line{
+  font-variant: small-caps;
+  color: rgb(100, 5, 5);
+}
+
+/* el pseudo elemento ::after nos permite insertar 
+contenido justo antes del contenido de una etiqueta */
+section p::after{
+  content: "Hola desde despues de mi contenido";
+  color: #c21313;
+  background-color: aqua;
+}

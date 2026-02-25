@@ -1,0 +1,41 @@
+/* Las funciones son bloques de codigo hermeticos que nos devuelvene el resultado de una operacion */
+/* Esta funcion en especifico nos sirve para generar un mismo color con distintos niveles de transparencia */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  place-content: center;
+  gap: 10px;
+}
+.container_item1 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background: rgba(88, 166, 255, 0.5);
+}
+.container_item2 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 88, 205, 0.5);
+}
+.container_item3 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 210, 88, 0.5);
+}
+.container_item4 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  background: rgba(88, 255, 91, 0.5);
+}/*# sourceMappingURL=styles.css.map */
