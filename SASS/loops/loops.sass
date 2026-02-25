@@ -1,0 +1,34 @@
+//lista de colores separados por comas
+$social-media-colors: #6bff81, #6bbcff, #ff936b
+
+//lista de colores separados por espacios
+$spacings: 10px 20px 30px
+
+//listas de clave - valor
+$font-sizes: (   //parentesis para hacer lista de valores en una variable//
+    "small": 12px,
+    "medium:" 16px,
+    "large": 20px,
+)
+
+$sm-background-colors: (
+  "purple": #6bbcff,
+  "orange": #6bff81,
+  "danger": #ff936b
+)
+
+//el primero de mis bucles es el each (para cada)
+@each $color-name, $color-value in $sm-background-colors
+  .bg-#{$color-name} // en la primera vuelta el valor de $color-name es "purple" por tanto se crea la clase .bg-purple
+    background-color: $color-value //en la primera vuelta el valor de $color-value es #c66bff
+//En la primera vuelta (iteracion) el valor de $color-name es "purple" y el valor de $color-value es #c66bff
+
+.btn
+  display: inline-block
+  padding: 10px 20px
+  border-radius: 5px
+  background-color: $color-value
+  color: #fff
+  text-decoration: none
+
+     

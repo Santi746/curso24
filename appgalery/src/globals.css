@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Tokens CSS para el chat - cambian automáticamente con el tema */
+:root {
+    --color-fondo-chat: white;
+    --color-texto-chat: black;
+}
+
+.dark {
+    --color-fondo-chat: #0f172a;
+    --color-texto-chat: #f8fafc;
+}
